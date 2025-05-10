@@ -67,7 +67,7 @@ const PopularMoviesCarousel = ({ movies }) => {
           '& li': {
             display: 'inline-block',
             '&.slick-active span': {
-              bgcolor: 'primary.main', // Active dot in blue
+              bgcolor: 'primary.main', 
             },
             '& button': {
               '&:before': {
