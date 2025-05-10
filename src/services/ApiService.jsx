@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-// Access environment variables through import.meta.env
+
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
 
-// Create configured axios instance
+
 const tmdbAPI = axios.create({
   baseURL: BASE_URL,
   params: {
