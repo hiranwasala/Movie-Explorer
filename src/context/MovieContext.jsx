@@ -6,7 +6,7 @@ export const MovieContext = createContext();
 export const MovieProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
   const [trending, setTrending] = useState([]);
-  const [popular, setPopular] = useState([]); // New state for popular movies
+  const [popular, setPopular] = useState([]); 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [query, setQuery] = useState('');
@@ -17,13 +17,13 @@ export const MovieProvider = ({ children }) => {
     return saved ? JSON.parse(saved) : [];
   });
 
-  // Fetch initial data (trending and popular movies)
+  
   useEffect(() => {
     const fetchInitialData = async () => {
       try {
         setLoading(true);
         
-        // Fetch both trending and popular movies in parallel
+        
         const [trendingData, popularData] = await Promise.all([
           fetchTrendingMovies(),
           fetchPopularMovies()
@@ -41,12 +41,12 @@ export const MovieProvider = ({ children }) => {
     fetchInitialData();
   }, []);
 
-  // Persist favorites to localStorage
+
   useEffect(() => {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }, [favorites]);
 
-  // Search movies function
+
   const search = async (newQuery, newPage = 1) => {
     if (!newQuery.trim()) return;
     
@@ -71,26 +71,26 @@ export const MovieProvider = ({ children }) => {
     }
   };
 
-  // Load more results for pagination
+ 
   const loadMore = () => {
     if (page < totalPages) {
       search(query, page + 1);
     }
   };
 
-  // Add movie to favorites
+
   const addFavorite = (movie) => {
     if (!favorites.some(fav => fav.id === movie.id)) {
       setFavorites([...favorites, movie]);
     }
   };
 
-  // Remove movie from favorites
+
   const removeFavorite = (id) => {
     setFavorites(favorites.filter(movie => movie.id !== id));
   };
 
-  // Check if a movie is in favorites
+
   const isFavorite = (id) => {
     return favorites.some(movie => movie.id === id);
   };
@@ -100,7 +100,7 @@ export const MovieProvider = ({ children }) => {
       value={{
         movies,
         trending,
-        popular, // Include popular movies in context
+        popular, 
         loading,
         error,
         query,
