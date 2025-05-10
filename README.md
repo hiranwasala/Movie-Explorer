@@ -29,7 +29,7 @@ TMDb API key (free account required)
 2. Install dependencies:
 
     npm install
-    # or
+    ## or
     yarn install
    
 4. Create a .env file in the root directory:
