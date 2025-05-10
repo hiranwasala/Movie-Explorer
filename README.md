@@ -1,12 +1,58 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Overview
 
-Currently, two official plugins are available:
+Movie Explorer is a web application that allows users to discover, search, and explore movies using data from The Movie Database (TMDb) API. The app features a responsive design with light/dark mode toggle, movie carousels, detailed movie pages, and favorites functionality.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Features
 
-## Expanding the ESLint configuration
+Movie Discovery: Browse trending and popular movies
+Search Functionality: Find movies by title
+Detailed Movie Pages: View comprehensive movie information including trailers
+Favorites System: Save and manage favorite movies
+Responsive Design: Works on all device sizes
+Theme Toggle: Switch between light and dark modes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Project Setup
+
+Prerequisites
+Node.js (v14 or higher)
+npm or yarn
+TMDb API key (free account required)
+
+# Installation
+
+1. Clone the repository:
+
+   git clone https://github.com/hiranwasala/Movie-Explrer.git
+   cd movie-explorer
+
+2. Install dependencies:
+
+    npm install
+    # or
+    yarn install
+   
+4. Create a .env file in the root directory:
+
+    REACT_APP_TMDB_API_KEY=your_api_key_here
+
+5. Start the development server:
+
+   npm start
+    # or
+   yarn start
+
+6. Open http://localhost:3000 in your browser.
+
+
+   # API Usage
+
+The app uses the TMDb API (v3) for all movie data. Key API endpoints used:
+
+  1. Trending movies: /trending/movie/week
+
+  2. Popular movies: /movie/popular
+
+  3. Movie search: /search/movie
+
+  4. Movie details: /movie/{movie_id}
