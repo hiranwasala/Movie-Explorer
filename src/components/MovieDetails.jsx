@@ -83,7 +83,7 @@ const MovieDetails = () => {
         position: 'relative',
       }}
     >
-      {/* Back Button */}
+     
       <Box sx={{ position: 'absolute', top: 16, left: 16 }}>
         <IconButton
           onClick={() => navigate(-1)}
