@@ -36,7 +36,7 @@ const MovieCard = ({ movie, onRemove, showRemoveButton = false }) => {
     if (onRemove) onRemove();
   };
 
-  // Round the rating to 1 decimal place
+ 
   const roundedRating = Number(movie.vote_average).toFixed(1);
 
   return (
@@ -46,7 +46,7 @@ const MovieCard = ({ movie, onRemove, showRemoveButton = false }) => {
         height: 400,
         display: 'flex', 
         flexDirection: 'column',
-        position: 'relative', // For absolute positioning of the favorite icon
+        position: 'relative', 
         transition: 'transform 0.2s',
         '&:hover': {
           transform: 'scale(1.03)',
