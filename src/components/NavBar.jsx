@@ -12,7 +12,7 @@ const NavBar = ({ toggleTheme, darkMode }) => {
   return (
     <AppBar position="static" elevation={0}>
       <Toolbar>
-        {/* Logo/Brand */}
+       
         <Typography 
           variant="h6" 
           component={Link} 
@@ -27,7 +27,7 @@ const NavBar = ({ toggleTheme, darkMode }) => {
           MovieExplorer
         </Typography>
 
-        {/* Navigation Links - Desktop */}
+    
         {!isMobile && (
           <Box sx={{ display: 'flex', gap: 2 }}>
             <Button 
